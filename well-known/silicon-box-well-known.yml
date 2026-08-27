@@ -1,0 +1,62 @@
+generated: '2026-08-27'
+method: probed
+source: https://www.silicon-box.com/.well-known/
+name: Silicon Box well-known probe
+description: >-
+  Anonymous probe of the RFC-registered /.well-known/ paths on every host
+  Silicon Box is known to control. Every path returned HTTP 404 (the Duda
+  site platform serves its standard HTML 404 page for unmatched paths), so
+  NO WellKnown or SecurityTxt pointer is emitted — this file records a
+  measured absence, not a presence. Two real root-level machine-readable
+  documents WERE found outside /.well-known/ and are recorded under
+  root_documents below.
+hosts:
+- host: www.silicon-box.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+root_documents:
+- path: /robots.txt
+  url: https://www.silicon-box.com/robots.txt
+  status: 200
+  file: silicon-box-robots.txt
+  note: >-
+    Carries a Content Signals Policy declaration —
+    "Content-Signal: search=yes, ai-input=yes, ai-train=yes" — a
+    machine-readable AI usage preference published by the company. This is
+    the basis for the ContentSignal pointer in apis.yml.
+- path: /llms.txt
+  url: https://www.silicon-box.com/llms.txt
+  status: 200
+  file: ../llms/silicon-box-llms.txt
+  note: Served verbatim; saved under llms/.
+notes:
+- >-
+  No API, developer or documentation subdomain resolves for silicon-box.com
+  (api., developer., developers., docs., portal., status., trust. all return
+  NXDOMAIN), so www.silicon-box.com is the only host to probe.
+- >-
+  siliconbox.com (no hyphen) is NOT this company — it 301s to luminary.ai.
+  It was excluded from every probe in this repo.

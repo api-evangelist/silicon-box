@@ -1,16 +1,34 @@
 aid: silicon-box
 name: Silicon Box
-description: 'Silicon Box is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Silicon Box Pte Ltd is an independent advanced semiconductor packaging and
+  chiplet integration company headquartered in Tampines, Singapore, founded in
+  2021 by Byung Joon Han, Sehat Sutardja and Weili Dai. It operates a $2B
+  panel-level packaging foundry and provides the back-end interconnection
+  infrastructure that makes chiplet adoption practical — from early design
+  collaboration through final manufacture and test — functioning as an OSAT
+  with an added design-consulting practice. It has shipped over 500 million
+  units at high yield, joined the imec Automotive Chiplet Program, and is
+  building a second €3.2B facility in Novara, Piedmont, Italy. Silicon Box is
+  a semiconductor manufacturer, not a software vendor: it publishes no
+  developer program, no API documentation and no machine-readable API
+  contract. See x-coverage below for the measured basis of that statement.
+image: https://lirp.cdn-website.com/68ddebd6/dms3rep/multi/opt/ENG20230714_130004-1920w.jpg
 url: https://raw.githubusercontent.com/api-evangelist/silicon-box/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-harvest-listing: https://www.hiive.com/securities/silicon-box-stock
 specificationVersion: '0.20'
 created: '2026-08-27'
 modified: '2026-08-27'
 tags:
+- Semiconductors
+- Chiplets
+- Advanced Packaging
+- Manufacturing
+- Hardware
+- Foundry
+- Singapore
 - Company
 apis: []
 maintainers:
@@ -19,5 +37,53 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/silicon-box-domain-security.yml
 - type: Website
-  url: https://www.hiive.com/securities/silicon-box-stock
+  url: https://www.silicon-box.com/
+- type: About
+  url: https://www.silicon-box.com/about
+- type: Services
+  url: https://www.silicon-box.com/services
+- type: Blog
+  url: https://www.silicon-box.com/newsroom
+- type: Support
+  url: https://www.silicon-box.com/contact
+- type: PrivacyPolicy
+  url: https://www.silicon-box.com/privacy-policy
+- type: Careers
+  url: https://www.silicon-box.com/careers
+- type: LLMsTxt
+  url: llms/silicon-box-llms.txt
+- type: ContentSignal
+  url: well-known/silicon-box-robots.txt
+x-enrichment:
+  date: '2026-08-27'
+  status: minimal
+  artifacts_added: 4
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    Silicon Box is a chiplet advanced-packaging foundry whose product is
+    physically manufactured silicon — its entire 47-URL sitemap is corporate
+    marketing (services, newsroom, careers, virtual factory) with no developer,
+    docs or API section, and no api./developer./docs./portal. subdomain
+    resolves at all.
+  evidence:
+  - url: https://www.silicon-box.com/sitemap.xml
+    status: 200
+  - url: https://www.silicon-box.com/openapi.json
+    status: 404
+  - url: https://www.silicon-box.com/api-docs
+    status: 404
+  - url: https://www.silicon-box.com/docs
+    status: 404
+  - url: https://www.silicon-box.com/graphql
+    status: 404
+  - url: https://www.silicon-box.com/.well-known/agent-card.json
+    status: 404
+  - url: https://www.silicon-box.com/llms.txt
+    status: 200
+  checked: '2026-08-27'
