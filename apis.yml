@@ -13,6 +13,17 @@ description: >-
   a semiconductor manufacturer, not a software vendor: it publishes no
   developer program, no API documentation and no machine-readable API
   contract. See x-coverage below for the measured basis of that statement.
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 image: https://lirp.cdn-website.com/68ddebd6/dms3rep/multi/opt/ENG20230714_130004-1920w.jpg
 url: https://raw.githubusercontent.com/api-evangelist/silicon-box/refs/heads/main/apis.yml
 x-type: company
