@@ -24,6 +24,18 @@ deliveryModel:
   - none
   generated: '2026-08-28'
   method: derived
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source:
+  - security
+  generated: '2026-09-02'
+  method: derived
 image: https://lirp.cdn-website.com/68ddebd6/dms3rep/multi/opt/ENG20230714_130004-1920w.jpg
 url: https://raw.githubusercontent.com/api-evangelist/silicon-box/refs/heads/main/apis.yml
 x-type: company
